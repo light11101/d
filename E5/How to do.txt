@@ -1,0 +1,23 @@
+push the repo to git hub
+
+docker run -d --name jenkins -p 8080:8080 -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
+
+docker exec -u 0 -it jenkins bash
+
+apt update
+apt install -y docker.io
+
+usermod -aG docker jenkins
+
+chmod 666 /var/run/docker.sock
+
+docker restart jenkins
+
+
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+login to jenkins
+
+1. New item -> enter name and select pipeline
+2. Pipeline section → Pipeline script from SCM → Git → enter repo URL
+3. Manage Jenkins → Credentials → Add Docker Hub credentials with ID "dockerhub-creds"
+4. Click Build Now

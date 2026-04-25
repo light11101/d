@@ -1,0 +1,41 @@
+Settings → Secrets and variables → Actions
+
+Add:
+
+DOCKER_USERNAME → your Docker Hub username
+
+DOCKER_PASSWORD → Docker Hub access token
+
+git add .
+
+git commit -m "Add GitHub Actions pipeline"
+
+git push origin main
+
+Check Pipeline
+
+Go to:
+
+GitHub → Actions tab
+
+if image not is pushed to docker:- {
+
+docker build -t username/python-app:latest .
+
+docker push username/python-app:latest }
+
+Check Docker Hub
+
+Open:
+
+https://hub.docker.com/
+
+Your image:
+
+yourusername/python-app:latest
+
+How to Verify
+
+Run:
+
+docker pull urk23cs1262/python-app:latest

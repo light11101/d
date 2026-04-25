@@ -1,0 +1,37 @@
+echo "# dev" >> README.md
+
+git init
+
+git add .
+
+git commit -m "first commit"
+
+git status
+
+git log
+
+git branch
+
+git branch nivesh
+
+git checkout nivesh
+
+git branch
+
+git checkout -b niveshr
+
+git branch
+
+git checkout main
+
+git merge nivesh
+
+git remote add origin (repo link)
+
+git push origin main
+
+or 
+
+git pull origin main --allow-unrelated-histories
+
+git pull origin main

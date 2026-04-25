@@ -1,0 +1,21 @@
+pip install flask
+
+python app.py
+
+You will see:
+
+Running on http://127.0.0.1:5000/
+
+use another terminal(+)
+
+Add Student
+
+Invoke-RestMethod -Uri http://localhost:5001/students -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"name":"Alice","roll":"CS001"}'
+
+View Students
+
+Invoke-RestMethod http://localhost:5001/students
+
+Delete Student
+
+Invoke-RestMethod -Uri http://localhost:5001/students/1 -Method DELETE

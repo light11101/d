@@ -1,0 +1,37 @@
+git init
+
+git add .
+
+git commit -m "Initial commit"
+
+git branch -M main
+
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+
+git push -u origin main
+
+Add Docker Hub Secrets 🔐
+
+Go to your GitHub repo:
+
+Settings → Secrets and variables → Actions
+
+Add:
+
+DOCKER_USERNAME → your Docker Hub username
+
+DOCKER_PASSWORD → Docker Hub access token
+
+git add .
+
+git commit -m "Add CI pipeline"
+
+git push origin main
+
+Go to GitHub → Actions tab
+
+You will see:
+
+Workflow running 
+
+Then success (green tick)

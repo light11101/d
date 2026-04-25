@@ -1,0 +1,11 @@
+bash commands
+
+build:-
+    docker build -t <docker-username>/flask-app:latest .
+
+test:-
+    docker run -d -p 5000:5000 <docker-username>/flask-app:latest
+
+login and push:-
+    docker login
+    docker push <docker-username>/flask-app:latest

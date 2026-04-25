@@ -1,0 +1,25 @@
+git add .
+
+git commit -m "Add GitHub Actions test workflow"
+
+git push origin main
+
+Check Output
+
+Go to:
+
+GitHub → Actions tab
+
+Click your workflow
+
+Expected Output
+
+test_add PASSED
+
+test_greet PASSED
+
+2 passed in 0.0Xs
+
+And you will see:
+
+Green Tick (✔)

@@ -1,0 +1,63 @@
+kubectl version
+
+Docker Desktop → Settings → Kubernetes
+
+check:
+
+Enable Kubernetes
+
+Click:
+
+Apply & Restart
+
+kubectl config use-context docker-desktop
+
+kubectl get nodes
+
+kubectl create deployment myapp --image=nginx:latest
+
+kubectl get deployments
+
+kubectl get pods
+
+kubectl scale deployment myapp --replicas=3
+
+kubectl get pods
+
+kubectl scale deployment myapp --replicas=1
+
+kubectl expose deployment myapp --port=80 --type=NodePort
+
+kubectl get services
+
+Output:
+
+myapp   NodePort   80:3xxxx
+
+Open: http://localhost:3xxxx
+
+kubectl describe pod <pod-name>
+
+kubectl logs <pod-name>
+
+kubectl delete deployment myapp
+
+kubectl delete service myapp
+
+after creating deployment file 
+
+kubectl apply -f deployment.yaml
+
+kubectl get all
+
+kubectl get pods
+
+kubectl get podskubectl expose deployment myapp --type=NodePort --port=80
+
+kubectl get services
+
+Output:
+
+myapp   NodePort   80:3xxxx
+
+Open: http://localhost:3xxxx
